@@ -72,7 +72,7 @@ void setup_microphone() {
 }
 
 void setup_oled(void) {
-    i2c_master_init(&dev, I2C_SDA_GPIO, I2C_SCL_GPIO, 0);
+    i2c_master_init(&dev, I2C_SDA_GPIO, I2C_SCL_GPIO, -1);
     sh1107_init(&dev, 64, 128);
 	sh1107_contrast(&dev, 0xff);
     sh1107_clear_screen(&dev, false);
